@@ -1,0 +1,25 @@
+@btn-prefix-cls: ~'dumi-oni-btn';
+.@{btn-prefix-cls} {
+  &-button {
+    padding: 6px 16px;
+    font-size: 12px;
+    min-width: 64px;
+  }
+
+  &-button[disabled] {
+    color: rgba(0, 0, 0, 0.26);
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+
+  &-default {
+  }
+  &-primary {
+    color: #fff;
+    background-color: #1976d2;
+  }
+
+  &-secondary {
+    color: #fff;
+    background-color: #dc004e;
+  }
+}

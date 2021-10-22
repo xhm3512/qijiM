@@ -1,0 +1,89 @@
+{
+  "name": "qiji",
+  "version": "0.0.4",
+  "scripts": {
+    "start": "dumi dev",
+    "docs:build": "dumi build",
+    "build": "father-build",
+    "build:dist": "father-build ./.fatherrc-component.ts",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "lib/index.d.ts",
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
+      }
+    ]
+  ],
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "IE 11",
+    "not IE 10"
+  ],
+  "keywords": [
+    "ant",
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0-rc || ^16.0.0-rc || ^16.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0-rc || ^16.0.0-rc || ^16.0.0"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@types/classnames": "^2.3.1",
+    "antd": "^4.16.3",
+    "braft-editor": "^2.3.9",
+    "classnames": "^2.2.6",
+    "dumi-theme-mobile": "^1.1.14",
+    "react-loadable": "^5.5.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^26.0.24",
+    "@types/react": "^17.0.0",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.5.20",
+    "babel-plugin-import": "^1.13.3",
+    "dumi": "^1.1.30",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
+    "father-build": "^1.17.2",
+    "jsdom": "^16.7.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "yorkie": "^2.0.0"
+  }
+}

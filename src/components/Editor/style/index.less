@@ -1,0 +1,89 @@
+.raftEditor-box-normal {
+  border: 1px solid #ddd;
+  &:hover {
+    border: 1px solid #fa2800;
+  }
+  .bf-content * {
+    line-height: 120% !important;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+  }
+}
+.raftEditor-box-err {
+  border: 1px solid #fa2800 !important;
+  .bf-content * {
+    line-height: 120% !important;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+  }
+}
+.raftEditor-box-input {
+  .bf-container .public-DraftEditor-content {
+    padding: 0 0 0 8px !important;
+  }
+  .bf-container .public-DraftEditorPlaceholder-root {
+    top: 0 !important;
+    left: 8px !important;
+    // transform: translate(-50%,0);
+  }
+  .bf-content * {
+    line-height: 32px !important;
+  }
+}
+.prohibiti-words-top-box {
+  font-size: 14px;
+  pointer-events: none;
+  color: #fa2800;
+  text-align: left;
+  margin: 10px 0;
+}
+// 输入框placeholder高亮
+.place-color {
+  .public-DraftEditorPlaceholder-inner {
+    color: rgba(250, 40, 0, 1);
+  }
+}
+
+.raftEditor-box {
+  background: #fff;
+  border-radius: 2px;
+  position: relative;
+  span[data-text='true'] {
+    font-size: 14px !important;
+  }
+  .data-count-box {
+    float: right;
+    white-space: nowrap;
+    // content: attr(data-count);
+    font-size: 14px;
+    color: #222;
+    // color: rgba(250, 40, 0, 1);
+    pointer-events: none;
+    position: absolute;
+    top: -24px;
+    right: 0;
+  }
+
+  .my-button {
+    color: red;
+  }
+  .bf-controlbar {
+    display: none;
+  }
+  .public-DraftEditorPlaceholder-root {
+    font-size: 14px !important;
+    color: #c7c7c7;
+  }
+  .bf-container .public-DraftEditor-content > div {
+    height: 100%;
+    padding-bottom: 0;
+  }
+  .bf-content {
+    padding-bottom: 0;
+  }
+  .bf-content * {
+    line-height: 100%;
+  }
+}
